@@ -58,3 +58,17 @@ spec:
     - name: completed_at
       type: timestamp
 ```
+
+## Settings of Execution Parameters
+
+| Parameter                              | Setting     |
+|----------------------------------------|----------------------|
+| Number of Clusters                     | 2                    |
+| Number of machines per cluster         | 2                    |
+| Network Bandwidth between clusters     | 1G                   |
+| CPU                                    | Intel i5-3570 4-core |
+| Memory                                 | 8 GB                 |
+| Number of users per second             | 3, 9, 18             |
+| Total number of requests per benchmark | 90, 270, 540         |
+| Distribution of requests               | Constant             |
+| Duration of each benchmark             | 30 seconds           |
