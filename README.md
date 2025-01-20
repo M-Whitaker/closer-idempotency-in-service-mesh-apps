@@ -72,3 +72,18 @@ spec:
 | Total number of requests per benchmark | 90, 270, 540         |
 | Distribution of requests               | Constant             |
 | Duration of each benchmark             | 30 seconds           |
+
+## Idempotency Service Flow Charts
+
+<img src="img/idempotency-service-get.png" width="300">
+
+<img src="img/idempotency-service-post.png" width="250">
+
+## User Satisfaction
+
+User satisfaction is analyzed for scenarios where a microservice suffers from a functional error; for which the application owner has provided the mesh with a developer-defined solver (a.k.a completer function).
+
+![User Satisfaction Figure](img/user-satisfaction.png)
+
+The figure above shows the total number of completed requests (i.e. satisfied), compared to the total number of sent counterparts. The results show a consistent $100\%$ request completion rate, for error-prone microservices with a developer-defined solvers. 
+The completion rate encompasses all requests for which a \verb|2xx| status code was initially returned to the client, and the request eventually completed. The high/consistent completion rate under different workloads illustrates the scalability of the system under variant working conditions.
